@@ -1,6 +1,7 @@
 # OrangeHRM Login Test Automation
 
-This repository contains Cypress automation tests for the OrangeHRM login feature.
+This repository contains Cypress automation tests for the **OrangeHRM login feature**.  
+The tests are designed to ensure the login page functions correctly and all related features work as expected.
 
 ## Test Cases
 

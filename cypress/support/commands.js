@@ -32,8 +32,19 @@
 //   cy.get("button[type='submit']").click()
 // })
 
-Cypress.Commands.add('login',(username, password)=>{
-  cy.get("input[name='username']",{ timeout: 4000 }).type(username);
-  cy.get("input[name='password']").type(password);
-  cy.get("button[type='submit']").click();
-})
+// Cypress.Commands.add('login',(username, password)=>{
+//   cy.get("input[name='username']",{ timeout: 4000 }).type(username);
+//   cy.get("input[name='password']").type(password);
+//   cy.get("button[type='submit']").click();
+// })
+
+import LoginPage from '../e2e/TUGAS_POM/Pages/loginPage';
+
+// Custom command login
+Cypress.Commands.add('login', (username, password) => {
+  LoginPage.visit();
+  LoginPage.fillUsername(username);
+  LoginPage.fillPassword(password);
+  LoginPage.clickLogin();
+});
+
