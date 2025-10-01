@@ -296,7 +296,7 @@ describe('ReqRes API Automation Testing', () => {
       expect(response.body).to.be.empty;
     });
   });
-  // 17. Chained Requests - Create, Update, then Delete
+  // 17. Requests - Create, Update, then Delete
   it('TESTAPI17 -> perform chained operations: Create -> Update -> Delete', () => {
     let userId;
 
