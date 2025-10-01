@@ -48,3 +48,15 @@ Cypress.Commands.add('login', (username, password) => {
   LoginPage.clickLogin();
 });
 
+//untuk test api
+Cypress.Commands.add('logResponse', (response) => {
+  cy.log(`Status: ${response.status}`);
+ cy.log(`Body: ${JSON.stringify(response.body, null, 2)}`);
+  
+  // Untuk detail lebih lengkap di console browser (F12)
+  console.log('=== API Response ===');
+  console.log('Status:', response.status);
+  console.log('Body:', response.body);
+  console.log('Duration:', response.duration, 'ms');
+  console.log('Headers:', response.headers);
+});
